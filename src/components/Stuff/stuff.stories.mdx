@@ -1,0 +1,26 @@
+<!-- YourComponent.stories.mdx -->
+
+import { Meta, Story } from '@storybook/addon-docs';
+
+import YourComponent from './Stuff.vue';
+
+<!--👇 The title prop determines where your story goes in the story list -->
+<Meta title="Stuff" component={YourComponent} />
+
+<!--👇 We create a “template” of how args map to rendering -->
+export const Template = (args) => ({
+    components: { YourComponent },
+    setup() {
+        return { args };
+    },
+    template: `<YourComponent v-bind="args" />`,
+});
+
+<!-- 👇 The args you need here will depend on your component -->
+<Story
+    name="Stuff"
+    args={{
+        name: 'Name'
+    }}>
+    {Template.bind({})}
+</Story>

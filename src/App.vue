@@ -11,7 +11,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import Stuff from './components/Stuff/Stuff.vue'
+import Stuff from './components/Stuff.vue'
 export default {
   name: 'App',
   components: {

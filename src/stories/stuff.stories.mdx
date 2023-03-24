@@ -2,10 +2,10 @@
 
 import { Meta, Story } from '@storybook/addon-docs';
 
-import YourComponent from './HelloWorld.vue';
+import YourComponent from '../components/Stuff.vue';
 
 <!--👇 The title prop determines where your story goes in the story list -->
-<Meta title="Hello World" component={YourComponent} />
+<Meta title="Stuff" component={YourComponent} />
 
 <!--👇 We create a “template” of how args map to rendering -->
 export const Template = (args) => ({
@@ -18,9 +18,9 @@ export const Template = (args) => ({
 
 <!-- 👇 The args you need here will depend on your component -->
 <Story
-    name="FirstStory"
+    name="Stuff"
     args={{
-        msg: 'This is a test'
+        name: 'Name'
     }}>
     {Template.bind({})}
 </Story>
